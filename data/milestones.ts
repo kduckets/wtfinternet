@@ -116,7 +116,7 @@ export interface Milestone {
       description: "The Apache HTTP Server is released, becoming the world's most popular web server software.",
       profitModel: "Open-source, community-driven development",
       impact: "Powered a significant portion of websites, promoting open-source in web infrastructure",
-      categories: ["Infrastructure", "Software"],
+      categories: ["Infrastructure", "Software", "Open-source"],
     },
     {
       id: "php",
@@ -125,7 +125,7 @@ export interface Milestone {
       description: "Rasmus Lerdorf releases the first version of PHP, a server-side scripting language.",
       profitModel: "Open-source, led to commercial web development",
       impact: "Enabled dynamic web content and web applications",
-      categories: ["Web", "Software"],
+      categories: ["Web", "Software", "Open-source"],
     },
     {
       id: "javascript",
@@ -229,6 +229,15 @@ export interface Milestone {
       categories: ["Nonprofit", "Legal"],
     },
     {
+      id: "4chan",
+      year: 2003,
+      title: "4chan",
+      description: "Christopher Poole launches 4chan, an anonymous imageboard website.",
+      profitModel: "Advertising and user donations",
+      impact: "Influenced internet culture, memes, and online anonymity",
+      categories: ["Social", "Web", "Content"],
+    },
+    {
       id: "steam",
       year: 2003,
       title: "Steam",
@@ -262,7 +271,7 @@ export interface Milestone {
       description: "The Mozilla Foundation releases Firefox 1.0, a free and open-source web browser.",
       profitModel: "Non-profit, funded by donations and search engine royalties",
       impact: "Promoted open-source software and web standards",
-      categories: ["Nonprofit", "Software"],
+      categories: ["Nonprofit", "Software", "Open-source"],
     },
     {
       id: "facebook",
@@ -465,6 +474,15 @@ export interface Milestone {
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research"],
     },
+    {
+      id: "linux",
+      year: 1991,
+      title: "Linux",
+      description: "Linus Torvalds releases the Linux kernel, the core of the Linux operating system.",
+      profitModel: "Open-source development, later commercialized through support and services",
+      impact: "Became the foundation for numerous operating systems and powered much of the internet's infrastructure",
+      categories: ["Software", "Open-source", "Infrastructure"],
+    },
   ]
   
   export interface CategoryGroup {
@@ -475,7 +493,7 @@ export interface Milestone {
   export const categoryGroups: CategoryGroup[] = [
     {
       name: "Technology",
-      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud"],
+      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source"],
     },
     {
       name: "Internet",
@@ -504,6 +522,10 @@ export interface Milestone {
     {
       name: "Development",
       categories: ["Collaboration", "Version Control"],
+    },
+    {
+      name: "Content",
+      categories: ["Content", "Photo"],
     },
   ]
   
