@@ -199,7 +199,7 @@ export interface Milestone {
       description: "The first widely-used peer-to-peer file sharing service, focusing on music.",
       profitModel: "Initially free, later subscription-based",
       impact: "Disrupted the music industry and sparked debates on digital rights",
-      categories: ["Commercial", "Software", "P2P"],
+      categories: ["Commercial", "Software", "P2P", "Music"],
     },
     {
       id: "wifi",
@@ -247,15 +247,6 @@ export interface Milestone {
       categories: ["Social", "Web", "Content"],
     },
     {
-      id: "steam",
-      year: 2003,
-      title: "Steam",
-      description: "Valve Corporation launches Steam, a digital distribution platform for video games.",
-      profitModel: "Digital game sales and distribution fees",
-      impact: "Revolutionized game distribution and popularized digital game libraries",
-      categories: ["Commercial", "Gaming", "Software"],
-    },
-    {
       id: "linkedin",
       year: 2003,
       title: "LinkedIn",
@@ -263,6 +254,26 @@ export interface Milestone {
       profitModel: "Freemium model, job postings, and premium subscriptions",
       impact: "Transformed professional networking and job hunting",
       categories: ["Commercial", "Social"],
+    },
+    {
+      id: "myspace",
+      year: 2003,
+      title: "MySpace",
+      description:
+        "Tom Anderson and Chris DeWolfe launch MySpace, one of the first social networking websites to gain widespread popularity.",
+      profitModel: "Advertising and partnerships with music labels and artists",
+      impact:
+        "Popularized social networking and personal profile customization, became a significant platform for music discovery",
+      categories: ["Social", "Web", "Commercial", "Music"],
+    },
+    {
+      id: "digg",
+      year: 2004,
+      title: "Digg",
+      description: "Kevin Rose, Owen Byrne, Ron Gorodetzky, and Jay Adelson found Digg, a social news website.",
+      profitModel: "Advertising and sponsored content",
+      impact: "Pioneered social news aggregation and influenced the concept of 'viral' content",
+      categories: ["Social", "Web", "Content"],
     },
     {
       id: "world-of-warcraft",
@@ -292,6 +303,17 @@ export interface Milestone {
       categories: ["Commercial", "Social"],
     },
     {
+      id: "reddit",
+      year: 2005,
+      title: "Reddit",
+      description:
+        "Steve Huffman and Alexis Ohanian launch Reddit, a social news aggregation, web content rating, and discussion platform.",
+      profitModel: "Advertising, premium memberships, and awards system",
+      impact:
+        "Became one of the most visited websites globally, known for its diverse communities and user-generated content",
+      categories: ["Social", "Web", "Content"],
+    },
+    {
       id: "youtube",
       year: 2005,
       title: "YouTube",
@@ -317,6 +339,15 @@ export interface Milestone {
       profitModel: "Hardware sales and app ecosystem",
       impact: "Transformed mobile computing and internet access",
       categories: ["Commercial", "Hardware"],
+    },
+    {
+      id: "bandcamp",
+      year: 2008,
+      title: "Bandcamp",
+      description: "Ethan Diamond and Shawn Grunberger launch Bandcamp, a music platform for independent artists.",
+      profitModel: "Revenue share from digital and physical sales, plus optional fan subscriptions",
+      impact: "Empowered independent musicians to distribute and sell their music directly to fans",
+      categories: ["Music", "E-commerce", "Web"],
     },
     {
       id: "github",
@@ -492,38 +523,6 @@ export interface Milestone {
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research"],
     },
-    {
-        id: "myspace",
-        year: 2003,
-        title: "MySpace",
-        description:
-          "Tom Anderson and Chris DeWolfe launch MySpace, one of the first social networking websites to gain widespread popularity.",
-        profitModel: "Advertising and partnerships with music labels and artists",
-        impact:
-          "Popularized social networking and personal profile customization, became a significant platform for music discovery",
-        categories: ["Social", "Web", "Commercial"],
-      },
-      {
-        id: "digg",
-        year: 2004,
-        title: "Digg",
-        description: "Kevin Rose, Owen Byrne, Ron Gorodetzky, and Jay Adelson found Digg, a social news website.",
-        profitModel: "Advertising and sponsored content",
-        impact: "Pioneered social news aggregation and influenced the concept of 'viral' content",
-        categories: ["Social", "Web", "Content"],
-      },
-      {
-        id: "reddit",
-        year: 2005,
-        title: "Reddit",
-        description:
-          "Steve Huffman and Alexis Ohanian launch Reddit, a social news aggregation, web content rating, and discussion platform.",
-        profitModel: "Advertising, premium memberships, and awards system",
-        impact:
-          "Became one of the most visited websites globally, known for its diverse communities and user-generated content",
-        categories: ["Social", "Web", "Content"],
-      }
-    
   ]
   
   export interface CategoryGroup {
@@ -534,11 +533,11 @@ export interface Milestone {
   export const categoryGroups: CategoryGroup[] = [
     {
       name: "Technology",
-      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source", "Decentralized"],
+      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source", "Decentralized", "Cryptocurrency"],
     },
     {
       name: "Internet",
-      categories: ["Web", "Search", "E-commerce", "Social", "Video", "Communication", "Cryptocurrency"],
+      categories: ["Web", "Search", "E-commerce", "Social", "Video", "Communication", "Music"],
     },
     {
       name: "Business",
@@ -552,10 +551,11 @@ export interface Milestone {
       name: "Governance",
       categories: ["Regulatory", "Legal", "Protocol"],
     },
+
     {
       name: "Gaming",
       categories: ["Gaming", "AR", "Virtual"],
-    },
+    }
   ]
   
   export const categories = categoryGroups.flatMap((group) => group.categories).sort()
