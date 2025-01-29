@@ -58,7 +58,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
 
   return (
     <div className="mt-6">
-      <h3 className="font-bold text-gray-700 mb-4">Comments</h3>
+      <h3 className="font-bold text-blue-400 mb-4">Comments</h3>
       <AnimatePresence>
         {comments.map((comment) => (
           <motion.div
@@ -67,10 +67,10 @@ export default function Comments({ milestoneId }: CommentsProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-gray-100 p-3 rounded-lg mb-2"
+            className="bg-gray-700 p-3 rounded-lg mb-2 border border-gray-600"
           >
-            <p className="font-semibold">{comment.userName}</p>
-            <p>{comment.text}</p>
+            <p className="font-semibold text-blue-300">{comment.userName}</p>
+            <p className="text-gray-200">{comment.text}</p>
           </motion.div>
         ))}
       </AnimatePresence>
@@ -80,7 +80,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Your name (optional)"
-          className="w-full"
+          className="w-full bg-gray-700 text-white border-gray-600 focus:border-blue-500"
         />
         <div className="flex gap-2">
           <Input
@@ -88,7 +88,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Add a comment..."
-            className="flex-grow"
+            className="flex-grow bg-gray-700 text-white border-gray-600 focus:border-blue-500"
           />
           <Button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
             Submit

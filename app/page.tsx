@@ -22,7 +22,7 @@ export default function Home() {
           What the fuck is the internet?
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
-        It's time to retrace our steps. Each internet milestone on the timeline contains its profit model and impact. 
+        Might be a good time to retrace our steps. Each internet milestone on the timeline contains its profit model and impact. 
         </p>
         <FilterBar
           categoryGroups={categoryGroups}

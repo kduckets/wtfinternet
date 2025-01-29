@@ -25,7 +25,7 @@ export default function FilterBar({ categoryGroups, selectedCategories, onToggle
   return (
     <div className="mb-6 bg-gray-800 p-4 rounded-lg shadow-lg">
       <h2 className="text-xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-        Filter Milestones
+        Filters
       </h2>
       <div className="md:hidden">
         <Dropdown categoryGroups={categoryGroups} selectedCategories={selectedCategories} onToggle={onToggleCategory} />
