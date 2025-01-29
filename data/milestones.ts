@@ -554,8 +554,8 @@ export interface Milestone {
       categories: ["Commercial", "Nonprofit", "Advertising"],
     },
     {
-      name: "Society",
-      categories: ["Digital", "Societal", "Research", "Education", "Legal"],
+      name: "Impact",
+      categories: ["Societal", "Research", "Education", "Legal"],
     }
   ]
   
