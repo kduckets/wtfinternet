@@ -37,7 +37,7 @@ function groupMilestonesByDecade(milestones: Milestone[]): [string, Milestone[]]
     ])
 }
 
-export default function Timeline({ milestones, onCategoryClick }: TimelineProps) {
+export default function Timeline({ milestones, filteredCategories, onCategoryClick }: TimelineProps) {
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE)
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({})
 
@@ -51,13 +51,15 @@ export default function Timeline({ milestones, onCategoryClick }: TimelineProps)
 
   useEffect(() => {
     const fetchCommentCounts = async () => {
-      const counts: Record<string, number> = {}
-      for (const milestone of sortedMilestones.slice(0, displayCount)) {
+      const newCounts: Record<string, number> = {}
+      const fetchPromises = sortedMilestones.slice(0, displayCount).map(async (milestone) => {
         const q = query(collection(db, "comments"), where("milestoneId", "==", milestone.id))
         const querySnapshot = await getDocs(q)
-        counts[milestone.id] = querySnapshot.size
-      }
-      setCommentCounts(counts)
+        newCounts[milestone.id] = querySnapshot.size
+      })
+
+      await Promise.all(fetchPromises)
+      setCommentCounts(newCounts)
     }
 
     fetchCommentCounts()
