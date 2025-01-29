@@ -48,7 +48,7 @@ export default function MilestoneCard({ milestone, isLeft, commentCount }: Miles
                       className="bg-blue-600 text-white flex items-center gap-1 cursor-pointer hover:bg-blue-700 transition-colors"
                       onClick={(e) => {
                         e.stopPropagation()
-                        setIsExpanded(true)
+                        setIsExpanded((prev) => !prev)
                       }}
                     >
                       <MessageCircle size={14} />
