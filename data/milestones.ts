@@ -523,6 +523,16 @@ export interface Milestone {
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research"],
     },
+    {
+        id: "aol",
+        year: 1985,
+        title: "America Online (AOL)",
+        description:
+          "Quantum Computer Services (later renamed AOL) launches an online service for Commodore 64 and 128 computers.",
+        profitModel: "Subscription-based online services, later advertising and web services",
+        impact: "Popularized internet access and online communities for mainstream users",
+        categories: ["Digital Platforms", "Commercial", "Communication"],
+      }
   ]
   
   export interface CategoryGroup {
