@@ -536,7 +536,7 @@ export interface Milestone {
       categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source", "Decentralized", "Cryptocurrency"],
     },
     {
-      name: "Internet",
+      name: "Platform",
       categories: ["Web", "Search", "E-commerce", "Social", "Video", "Communication", "Music"],
     },
     {
