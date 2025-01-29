@@ -502,7 +502,7 @@ export interface Milestone {
   export const categoryGroups: CategoryGroup[] = [
     {
       name: "Technology",
-      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source"],
+      categories: ["Infrastructure", "Hardware", "Software", "AI", "Wireless", "Cloud", "Open-source", "Decentralized"],
     },
     {
       name: "Internet",
@@ -522,19 +522,11 @@ export interface Milestone {
     },
     {
       name: "Finance",
-      categories: ["Cryptocurrency", "Decentralized"],
+      categories: ["Cryptocurrency"],
     },
     {
       name: "Gaming",
       categories: ["Gaming", "AR", "Virtual"],
-    },
-    {
-      name: "Development",
-      categories: ["Collaboration", "Version Control"],
-    },
-    {
-      name: "Content",
-      categories: ["Content", "Photo"],
     },
   ]
   

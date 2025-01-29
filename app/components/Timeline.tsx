@@ -37,7 +37,7 @@ function groupMilestonesByDecade(milestones: Milestone[]): [string, Milestone[]]
     ])
 }
 
-export default function Timeline({ milestones, filteredCategories, onCategoryClick }: TimelineProps) {
+export default function Timeline({ milestones, onCategoryClick }: TimelineProps) {
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE)
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({})
 
