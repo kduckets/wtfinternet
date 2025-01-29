@@ -43,7 +43,14 @@ export default function MilestoneCard({ milestone, isLeft, commentCount }: Miles
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg md:text-xl">{milestone.title}</CardTitle>
                   {commentCount > 0 && (
-                    <Badge variant="secondary" className="bg-blue-600 text-white flex items-center gap-1">
+                    <Badge
+                      variant="secondary"
+                      className="bg-blue-600 text-white flex items-center gap-1 cursor-pointer hover:bg-blue-700 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setIsExpanded(true)
+                      }}
+                    >
                       <MessageCircle size={14} />
                       {commentCount}
                     </Badge>
@@ -65,7 +72,7 @@ export default function MilestoneCard({ milestone, isLeft, commentCount }: Miles
               onClick={() => setIsExpanded(!isExpanded)}
               className="mt-4 w-full justify-between bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600"
             >
-              {isExpanded ? "Hide Details" : "Show Details"}
+              {isExpanded ? "Hide Details and Comments" : "Show Details and Comments"}
               {isExpanded ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
             </Button>
             <AnimatePresence>
