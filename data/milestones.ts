@@ -532,7 +532,18 @@ export interface Milestone {
         profitModel: "Subscription-based online services, later advertising and web services",
         impact: "Popularized internet access and online communities for mainstream users",
         categories: ["Digital Platforms", "Commercial", "Communication"],
-      }
+      },
+      {
+        id: "moocs",
+        year: 2012,
+        title: "Massive Open Online Courses (MOOCs)",
+        description:
+          "Platforms like Coursera, edX, and Udacity launch, offering free online courses from top universities to a global audience.",
+        profitModel: "Freemium model, offering free courses with paid certifications and specializations",
+        impact:
+          "Democratized access to higher education and professional development, allowing millions to learn from top institutions regardless of location or background",
+        categories: ["Education", "Digital", "Commercial"],
+      },
   ]
   
   export interface CategoryGroup {
