@@ -492,6 +492,38 @@ export interface Milestone {
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research"],
     },
+    {
+        id: "myspace",
+        year: 2003,
+        title: "MySpace",
+        description:
+          "Tom Anderson and Chris DeWolfe launch MySpace, one of the first social networking websites to gain widespread popularity.",
+        profitModel: "Advertising and partnerships with music labels and artists",
+        impact:
+          "Popularized social networking and personal profile customization, became a significant platform for music discovery",
+        categories: ["Social", "Web", "Commercial"],
+      },
+      {
+        id: "digg",
+        year: 2004,
+        title: "Digg",
+        description: "Kevin Rose, Owen Byrne, Ron Gorodetzky, and Jay Adelson found Digg, a social news website.",
+        profitModel: "Advertising and sponsored content",
+        impact: "Pioneered social news aggregation and influenced the concept of 'viral' content",
+        categories: ["Social", "Web", "Content"],
+      },
+      {
+        id: "reddit",
+        year: 2005,
+        title: "Reddit",
+        description:
+          "Steve Huffman and Alexis Ohanian launch Reddit, a social news aggregation, web content rating, and discussion platform.",
+        profitModel: "Advertising, premium memberships, and awards system",
+        impact:
+          "Became one of the most visited websites globally, known for its diverse communities and user-generated content",
+        categories: ["Social", "Web", "Content"],
+      }
+    
   ]
   
   export interface CategoryGroup {
