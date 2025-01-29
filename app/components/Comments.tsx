@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { motion, AnimatePresence } from "framer-motion"
 import { db } from "../../lib/firebase"
 import { collection, addDoc, query, where, orderBy, onSnapshot, limit } from "firebase/firestore"
+import SubThread from "./SubThread"
 
 interface Comment {
   id: string
@@ -28,7 +29,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
       collection(db, "comments"),
       where("milestoneId", "==", milestoneId),
       orderBy("createdAt", "desc"),
-      limit(50), // Limit the number of comments fetched
+      limit(50),
     )
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -71,6 +72,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
           >
             <p className="font-semibold text-blue-300">{comment.userName}</p>
             <p className="text-gray-200">{comment.text}</p>
+            <SubThread commentId={comment.id} />
           </motion.div>
         ))}
       </AnimatePresence>
