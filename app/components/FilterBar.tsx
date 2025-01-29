@@ -70,7 +70,7 @@ export default function FilterBar({
           onClearAll={onClearAll}
         />
       </div>
-      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-4">
         {categoryGroups.map((group) => (
           <Collapsible
             key={group.name}
