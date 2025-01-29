@@ -15,6 +15,16 @@ export default function Home() {
     )
   }, [])
 
+  const handleCategoryClick = useCallback((category: string) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category],
+    )
+  }, [])
+
+  const handleClearAll = useCallback(() => {
+    setSelectedCategories([])
+  }, [])
+
   return (
     <main className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -28,9 +38,13 @@ export default function Home() {
           categoryGroups={categoryGroups}
           selectedCategories={selectedCategories}
           onToggleCategory={handleToggleCategory}
+          onClearAll={handleClearAll}
         />
-        <Timeline milestones={milestones} filteredCategories={selectedCategories} />
-      </div>
+    <Timeline
+          milestones={milestones}
+          filteredCategories={selectedCategories}
+          onCategoryClick={handleCategoryClick}
+        />      </div>
       <ScrollToTopButton />
     </main>
   )

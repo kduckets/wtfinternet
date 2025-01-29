@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import type { Milestone } from "../../data/milestones"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -14,9 +14,10 @@ interface MilestoneCardProps {
   milestone: Milestone
   isLeft: boolean
   commentCount: number
+  onCategoryClick: (category: string) => void
 }
 
-export default function MilestoneCard({ milestone, isLeft, commentCount }: MilestoneCardProps) {
+export default function MilestoneCard({ milestone, isLeft, commentCount, onCategoryClick }: MilestoneCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -58,7 +59,15 @@ export default function MilestoneCard({ milestone, isLeft, commentCount }: Miles
                 </div>
                 <div className="flex flex-wrap items-center mt-1 gap-2">
                   {milestone.categories.map((category) => (
-                    <Badge key={category} variant="secondary" className="text-xs md:text-sm bg-black text-white">
+                    <Badge
+                      key={category}
+                      variant="secondary"
+                      className="text-xs md:text-sm bg-black text-white cursor-pointer hover:bg-gray-700 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        onCategoryClick(category)
+                      }}
+                    >
                       {category}
                     </Badge>
                   ))}

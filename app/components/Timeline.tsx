@@ -11,6 +11,7 @@ import { collection, query, where, getDocs } from "firebase/firestore"
 interface TimelineProps {
   milestones: Milestone[]
   filteredCategories: string[]
+  onCategoryClick: (category: string) => void
 }
 
 const ITEMS_PER_PAGE = 10
@@ -36,7 +37,7 @@ function groupMilestonesByDecade(milestones: Milestone[]): [string, Milestone[]]
     ])
 }
 
-export default function Timeline({ milestones, filteredCategories }: TimelineProps) {
+export default function Timeline({ milestones, filteredCategories, onCategoryClick }: TimelineProps) {
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE)
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({})
 
@@ -102,6 +103,7 @@ export default function Timeline({ milestones, filteredCategories }: TimelinePro
                     milestone={milestone}
                     isLeft={index % 2 === 0}
                     commentCount={commentCounts[milestone.id] || 0}
+                    onCategoryClick={onCategoryClick}
                   />
                 </motion.div>
               ))}

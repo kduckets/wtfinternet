@@ -17,9 +17,10 @@ interface DropdownProps {
   categoryGroups: CategoryGroup[]
   selectedCategories: string[]
   onToggle: (category: string) => void
+  onClearAll: () => void
 }
 
-export default function Dropdown({ categoryGroups, selectedCategories, onToggle }: DropdownProps) {
+export default function Dropdown({ categoryGroups, selectedCategories, onToggle, onClearAll }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -29,11 +30,21 @@ export default function Dropdown({ categoryGroups, selectedCategories, onToggle 
           variant="outline"
           className="w-full justify-between bg-gray-700 text-white hover:bg-gray-600 border-gray-600"
         >
-          {selectedCategories.length > 0 ? `${selectedCategories.length} selected` : "Filter by category"}
+          {selectedCategories.length > 0
+            ? `${selectedCategories.length} filter${selectedCategories.length > 1 ? "s" : ""} selected`
+            : "Filter by category"}
           {isOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-full max-h-[60vh] overflow-auto bg-gray-800 border border-gray-700">
+        {selectedCategories.length > 0 && (
+          <>
+            <DropdownMenuItem onSelect={onClearAll} className="text-red-500 hover:text-red-400 hover:bg-gray-700">
+              Clear All Filters
+            </DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-gray-700" />
+          </>
+        )}
         {categoryGroups.map((group, index) => (
           <div key={group.name}>
             {index > 0 && <DropdownMenuSeparator className="bg-gray-700" />}
