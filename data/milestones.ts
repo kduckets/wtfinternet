@@ -562,7 +562,7 @@ export interface Milestone {
     },
     {
       name: "Business",
-      categories: ["Commercial", "Nonprofit", "Advertising"],
+      categories: ["Commercial", "Nonprofit"],
     },
     {
       name: "Impact",
