@@ -1,10 +1,12 @@
 "use client"
 
-import { useState, useCallback, useEffect, useRef } from "react"
+import { useState, useCallback, useEffect } from "react"
 import type { Milestone } from "../../data/milestones"
 import MilestoneCard from "./MilestoneCard"
 import InfiniteScroll from "./InfiniteScroll"
 import { motion, AnimatePresence } from "framer-motion"
+import { db } from "../../lib/firebase"
+import { collection, query, where, getDocs } from "firebase/firestore"
 
 interface TimelineProps {
   milestones: Milestone[]
@@ -36,7 +38,7 @@ function groupMilestonesByDecade(milestones: Milestone[]): [string, Milestone[]]
 
 export default function Timeline({ milestones, filteredCategories }: TimelineProps) {
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE)
-  const prevDisplayCountRef = useRef(displayCount)
+  const [commentCounts, setCommentCounts] = useState<Record<string, number>>({})
 
   const filteredMilestones =
     filteredCategories.length === 0
@@ -52,14 +54,18 @@ export default function Timeline({ milestones, filteredCategories }: TimelinePro
   }, [])
 
   useEffect(() => {
-    setDisplayCount(ITEMS_PER_PAGE)
-  }, [])
+    const fetchCommentCounts = async () => {
+      const counts: Record<string, number> = {}
+      for (const milestone of sortedMilestones.slice(0, displayCount)) {
+        const q = query(collection(db, "comments"), where("milestoneId", "==", milestone.id))
+        const querySnapshot = await getDocs(q)
+        counts[milestone.id] = querySnapshot.size
+      }
+      setCommentCounts(counts)
+    }
 
-  useEffect(() => {
-    prevDisplayCountRef.current = displayCount
-  }, [displayCount])
-
-  const isNewlyLoaded = (index: number) => index >= prevDisplayCountRef.current
+    fetchCommentCounts()
+  }, [sortedMilestones, displayCount])
 
   return (
     <div className="relative">
@@ -84,15 +90,19 @@ export default function Timeline({ milestones, filteredCategories }: TimelinePro
               {decadeMilestones.map((milestone, index) => (
                 <motion.div
                   key={milestone.id}
-                  initial={isNewlyLoaded(index) ? { opacity: 0, y: 50 } : false}
+                  initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -50 }}
                   transition={{
                     duration: 0.5,
-                    delay: isNewlyLoaded(index) ? (index % ITEMS_PER_PAGE) * 0.1 : 0,
+                    delay: index * 0.1,
                   }}
                 >
-                  <MilestoneCard milestone={milestone} isLeft={index % 2 === 0} />
+                  <MilestoneCard
+                    milestone={milestone}
+                    isLeft={index % 2 === 0}
+                    commentCount={commentCounts[milestone.id] || 0}
+                  />
                 </motion.div>
               ))}
             </div>

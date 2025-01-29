@@ -8,14 +8,15 @@ import { Badge } from "@/components/ui/badge"
 import MilestoneDetails from "./MilestoneDetails"
 import Comments from "./Comments"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react"
 
 interface MilestoneCardProps {
   milestone: Milestone
   isLeft: boolean
+  commentCount: number
 }
 
-export default function MilestoneCard({ milestone, isLeft }: MilestoneCardProps) {
+export default function MilestoneCard({ milestone, isLeft, commentCount }: MilestoneCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -39,7 +40,15 @@ export default function MilestoneCard({ milestone, isLeft }: MilestoneCardProps)
                 {milestone.year}
               </div>
               <div className="flex-1">
-                <CardTitle className="text-lg md:text-xl">{milestone.title}</CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-lg md:text-xl">{milestone.title}</CardTitle>
+                  {commentCount > 0 && (
+                    <Badge variant="secondary" className="bg-blue-600 text-white flex items-center gap-1">
+                      <MessageCircle size={14} />
+                      {commentCount}
+                    </Badge>
+                  )}
+                </div>
                 <div className="flex flex-wrap items-center mt-1 gap-2">
                   {milestone.categories.map((category) => (
                     <Badge key={category} variant="secondary" className="text-xs md:text-sm bg-black text-white">
