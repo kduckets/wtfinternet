@@ -547,7 +547,7 @@ export interface Milestone {
     },
     {
       name: "Platform",
-      categories: ["Web", "Search", "E-commerce", "Social", "Video", "Communication", "Music"],
+      categories: ["Web", "Search", "E-commerce", "Social", "Video", "Communication", "Gaming", "Music"],
     },
     {
       name: "Business",
@@ -560,11 +560,6 @@ export interface Milestone {
     {
       name: "Governance",
       categories: ["Regulatory", "Legal", "Protocol"],
-    },
-
-    {
-      name: "Gaming",
-      categories: ["Gaming", "AR", "Virtual"],
     }
   ]
   
