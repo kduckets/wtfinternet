@@ -64,15 +64,6 @@ export interface Milestone {
       categories: ["Infrastructure", "Web"],
     },
     {
-      id: "aim",
-      year: 1997,
-      title: "AOL Instant Messenger (AIM)",
-      description: "AOL launches AIM, one of the first popular instant messaging services.",
-      profitModel: "Free service bundled with AOL subscriptions, later ad-supported",
-      impact: "Popularized real-time online communication and influenced future messaging platforms",
-      categories: ["Communication", "Software", "Social"],
-    },
-    {
       id: "first-website",
       year: 1991,
       title: "First Website",
@@ -107,6 +98,16 @@ export interface Milestone {
       profitModel: "E-commerce, later expanded to cloud services and more",
       impact: "Pioneered e-commerce and revolutionized retail",
       categories: ["Commercial", "E-commerce"],
+    },
+    {
+      id: "craigslist",
+      year: 1995,
+      title: "Craigslist",
+      description:
+        "Craig Newmark launches Craigslist as an email distribution list to friends, featuring local events in the San Francisco Bay Area.",
+      profitModel: "Paid job listings and apartment listings in select cities",
+      impact: "Revolutionized classified ads and local community engagement online",
+      categories: ["Commercial", "Web", "Social"],
     },
     {
       id: "apache",
@@ -155,6 +156,25 @@ export interface Milestone {
       categories: ["Nonprofit", "Digital"],
     },
     {
+      id: "ultima-online",
+      year: 1997,
+      title: "Ultima Online",
+      description:
+        "One of the first massively multiplayer online role-playing games (MMORPGs) to achieve widespread success.",
+      profitModel: "Subscription-based gaming",
+      impact: "Pioneered the MMORPG genre and demonstrated the potential of persistent online worlds",
+      categories: ["Commercial", "Gaming", "Software"],
+    },
+    {
+      id: "aim",
+      year: 1997,
+      title: "AOL Instant Messenger (AIM)",
+      description: "AOL launches AIM, one of the first popular instant messaging services.",
+      profitModel: "Free service bundled with AOL subscriptions, later ad-supported",
+      impact: "Popularized real-time online communication and influenced future messaging platforms",
+      categories: ["Communication", "Software", "Social"],
+    },
+    {
       id: "google",
       year: 1998,
       title: "Google",
@@ -182,6 +202,15 @@ export interface Milestone {
       categories: ["Infrastructure", "Wireless"],
     },
     {
+      id: "bittorrent",
+      year: 2001,
+      title: "BitTorrent",
+      description: "Bram Cohen creates BitTorrent, a peer-to-peer file sharing protocol.",
+      profitModel: "Open protocol, later commercialized through various applications",
+      impact: "Revolutionized file sharing and content distribution",
+      categories: ["Software", "P2P", "Protocol"],
+    },
+    {
       id: "wikipedia",
       year: 2001,
       title: "Wikipedia",
@@ -200,6 +229,15 @@ export interface Milestone {
       categories: ["Nonprofit", "Legal"],
     },
     {
+      id: "steam",
+      year: 2003,
+      title: "Steam",
+      description: "Valve Corporation launches Steam, a digital distribution platform for video games.",
+      profitModel: "Digital game sales and distribution fees",
+      impact: "Revolutionized game distribution and popularized digital game libraries",
+      categories: ["Commercial", "Gaming", "Software"],
+    },
+    {
       id: "linkedin",
       year: 2003,
       title: "LinkedIn",
@@ -207,6 +245,15 @@ export interface Milestone {
       profitModel: "Freemium model, job postings, and premium subscriptions",
       impact: "Transformed professional networking and job hunting",
       categories: ["Commercial", "Social"],
+    },
+    {
+      id: "world-of-warcraft",
+      year: 2004,
+      title: "World of Warcraft",
+      description: "Blizzard Entertainment launches World of Warcraft, which becomes the world's most popular MMORPG.",
+      profitModel: "Subscription-based gaming with later microtransactions",
+      impact: "Set new standards for MMORPGs and online gaming communities",
+      categories: ["Commercial", "Gaming", "Software"],
     },
     {
       id: "mozilla-firefox",
@@ -254,6 +301,25 @@ export interface Milestone {
       categories: ["Commercial", "Hardware"],
     },
     {
+      id: "github",
+      year: 2008,
+      title: "GitHub",
+      description:
+        "Tom Preston-Werner, Chris Wanstrath, and PJ Hyett launch GitHub, a web-based hosting service for version control using Git.",
+      profitModel: "Freemium model with paid plans for private repositories and advanced features",
+      impact: "Revolutionized collaborative software development and became the largest host of source code in the world",
+      categories: ["Commercial", "Software", "Collaboration"],
+    },
+    {
+      id: "app-store",
+      year: 2008,
+      title: "App Store",
+      description: "Apple launches the App Store for iOS devices, creating a new ecosystem for mobile applications.",
+      profitModel: "Revenue sharing with app developers",
+      impact: "Revolutionized software distribution and created the mobile app economy",
+      categories: ["Commercial", "Software", "Mobile"],
+    },
+    {
       id: "bitcoin",
       year: 2009,
       title: "Bitcoin",
@@ -270,6 +336,15 @@ export interface Milestone {
       profitModel: "Advertising and influencer marketing",
       impact: "Changed how people share and consume visual content",
       categories: ["Commercial", "Social", "Photo"],
+    },
+    {
+      id: "twitch",
+      year: 2011,
+      title: "Twitch",
+      description: "Twitch.tv is launched as a spin-off of Justin.tv, focusing on video game live streaming.",
+      profitModel: "Advertising, subscriptions, and donations",
+      impact: "Popularized live streaming of video games and esports",
+      categories: ["Commercial", "Gaming", "Video"],
     },
     {
       id: "uber",
@@ -306,6 +381,16 @@ export interface Milestone {
       profitModel: "In-app purchases and sponsored locations",
       impact: "Mainstreamed augmented reality technology",
       categories: ["Commercial", "Gaming", "AR"],
+    },
+    {
+      id: "fortnite",
+      year: 2017,
+      title: "Fortnite",
+      description:
+        "Epic Games releases Fortnite, which becomes a cultural phenomenon and pioneer in cross-platform play.",
+      profitModel: "Free-to-play with in-game purchases",
+      impact: "Popularized the battle royale genre and revolutionized the free-to-play model",
+      categories: ["Commercial", "Gaming", "Software"],
     },
     {
       id: "gdpr",
@@ -411,6 +496,14 @@ export interface Milestone {
     {
       name: "Finance",
       categories: ["Cryptocurrency", "Decentralized"],
+    },
+    {
+      name: "Gaming",
+      categories: ["Gaming", "AR", "Virtual"],
+    },
+    {
+      name: "Development",
+      categories: ["Collaboration", "Version Control"],
     },
   ]
   
