@@ -64,6 +64,15 @@ export interface Milestone {
       categories: ["Infrastructure", "Web"],
     },
     {
+      id: "aim",
+      year: 1997,
+      title: "AOL Instant Messenger (AIM)",
+      description: "AOL launches AIM, one of the first popular instant messaging services.",
+      profitModel: "Free service bundled with AOL subscriptions, later ad-supported",
+      impact: "Popularized real-time online communication and influenced future messaging platforms",
+      categories: ["Communication", "Software", "Social"],
+    },
+    {
       id: "first-website",
       year: 1991,
       title: "First Website",
