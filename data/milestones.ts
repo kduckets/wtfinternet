@@ -466,7 +466,7 @@ export interface Milestone {
       description: "The COVID-19 pandemic accelerates digital transformation across industries.",
       profitModel: "Various, including e-commerce, remote work tools, and telemedicine",
       impact: "Rapidly shifted many aspects of daily life online",
-      categories: ["Societal", "Digital"],
+      categories: ["Society", "Digital"],
     },
     {
       id: "signal-growth",
@@ -611,7 +611,7 @@ export interface Milestone {
     },
     {
       name: "Impact",
-      categories: ["Societal", "Research", "Education", "Legal"],
+      categories: ["Society", "Research", "Education", "Legal"],
     }
   ]
   
