@@ -64,6 +64,15 @@ export interface Milestone {
       categories: ["Infrastructure", "Web"],
     },
     {
+      id: "linux",
+      year: 1991,
+      title: "Linux",
+      description: "Linus Torvalds releases the Linux kernel, the core of the Linux operating system.",
+      profitModel: "Open-source development, later commercialized through support and services",
+      impact: "Became the foundation for numerous operating systems and powered much of the internet's infrastructure",
+      categories: ["Software", "Open-source", "Infrastructure"],
+    },
+    {
       id: "first-website",
       year: 1991,
       title: "First Website",
@@ -392,6 +401,15 @@ export interface Milestone {
       categories: ["Commercial", "Gaming", "AR"],
     },
     {
+      id: "tiktok",
+      year: 2016,
+      title: "TikTok",
+      description: "ByteDance launches TikTok (known as Douyin in China), a short-form video hosting service.",
+      profitModel: "Advertising and in-app purchases",
+      impact: "Revolutionized short-form video content and influenced global pop culture",
+      categories: ["Commercial", "Social", "Video"],
+    },
+    {
       id: "fortnite",
       year: 2017,
       title: "Fortnite",
@@ -473,15 +491,6 @@ export interface Milestone {
       profitModel: "AI-as-a-service, specialized AI applications",
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research"],
-    },
-    {
-      id: "linux",
-      year: 1991,
-      title: "Linux",
-      description: "Linus Torvalds releases the Linux kernel, the core of the Linux operating system.",
-      profitModel: "Open-source development, later commercialized through support and services",
-      impact: "Became the foundation for numerous operating systems and powered much of the internet's infrastructure",
-      categories: ["Software", "Open-source", "Infrastructure"],
     },
   ]
   

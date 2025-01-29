@@ -1,13 +1,15 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useMemo } from "react"
 import Timeline from "./components/Timeline"
 import FilterBar from "./components/FilterBar"
 import ScrollToTopButton from "./components/ScrollToTopButton"
 import { milestones, categoryGroups } from "../data/milestones"
+import SearchBox from "./components/SearchBox"
 
 export default function Home() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+  const [searchQuery, setSearchQuery] = useState("")
 
   const handleToggleCategory = useCallback((category: string) => {
     setSelectedCategories((prev) =>
@@ -23,7 +25,27 @@ export default function Home() {
 
   const handleClearAll = useCallback(() => {
     setSelectedCategories([])
+    setSearchQuery("")
   }, [])
+
+  const handleSearch = useCallback((query: string) => {
+    setSearchQuery(query)
+  }, [])
+
+  const filteredMilestones = useMemo(() => {
+    return milestones.filter((milestone) => {
+      const matchesCategories =
+        selectedCategories.length === 0 ||
+        milestone.categories.some((category) => selectedCategories.includes(category))
+
+      const matchesSearch =
+        searchQuery === "" ||
+        milestone.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        milestone.description.toLowerCase().includes(searchQuery.toLowerCase())
+
+      return matchesCategories && matchesSearch
+    })
+  }, [selectedCategories, searchQuery])
 
   return (
     <main className="min-h-screen bg-gray-900 text-white">
@@ -34,6 +56,7 @@ export default function Home() {
         <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
         Might be a good time to retrace our steps. Each internet milestone on the timeline contains its profit model and impact. 
         </p>
+        <SearchBox onSearch={handleSearch} />
         <FilterBar
           categoryGroups={categoryGroups}
           selectedCategories={selectedCategories}
@@ -41,10 +64,11 @@ export default function Home() {
           onClearAll={handleClearAll}
         />
     <Timeline
-          milestones={milestones}
+          milestones={filteredMilestones}
           filteredCategories={selectedCategories}
           onCategoryClick={handleCategoryClick}
-        />      </div>
+        />      
+        </div>
       <ScrollToTopButton />
     </main>
   )

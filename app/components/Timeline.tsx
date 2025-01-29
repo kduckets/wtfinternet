@@ -41,13 +41,8 @@ export default function Timeline({ milestones, filteredCategories, onCategoryCli
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE)
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({})
 
-  const filteredMilestones =
-    filteredCategories.length === 0
-      ? milestones
-      : milestones.filter((m) => m.categories.some((cat) => filteredCategories.includes(cat)))
-
   // Sort all milestones chronologically before grouping
-  const sortedMilestones = [...filteredMilestones].sort((a, b) => a.year - b.year)
+  const sortedMilestones = [...milestones].sort((a, b) => a.year - b.year)
   const groupedMilestones = groupMilestonesByDecade(sortedMilestones.slice(0, displayCount))
 
   const loadMore = useCallback(() => {
@@ -111,7 +106,7 @@ export default function Timeline({ milestones, filteredCategories, onCategoryCli
           ))}
         </div>
       </AnimatePresence>
-      <InfiniteScroll onLoadMore={loadMore} hasMore={displayCount < filteredMilestones.length} />
+      <InfiniteScroll onLoadMore={loadMore} hasMore={displayCount < milestones.length} />
     </div>
   )
 }
