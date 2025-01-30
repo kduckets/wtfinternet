@@ -28,9 +28,9 @@ export default function Home() {
     setSearchQuery("")
   }, [])
 
-  const handleSearch = useCallback((query: string) => {
-    setSearchQuery(query)
-  }, [])
+  // const handleSearch = useCallback((query: string) => {
+  //   setSearchQuery(query)
+  // }, [])
 
   const filteredMilestones = useMemo(() => {
     return milestones.filter((milestone) => {
