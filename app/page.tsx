@@ -55,7 +55,8 @@ export default function Home() {
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">
        The internet can be a powerful tool used for collaboration, communication, and widely accessible reliable information. 
-       It can also be a powerful tool used for greed, deceit, and widely accessible dangerous misinformation. It might be a good time to retrace our steps to explore how we got here.
+       It can also be a powerful tool used for greed, deceit, and widely accessible dangerous misinformation. It might be a good time to retrace our steps to explore how we got here. If we can better understand how it was built and how it evovled, perhaps we can get better at detecting its deceptions and its lies.
+
         </p>
        <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> Each internet milestone on the timeline contains its profit model and technological impact. Feel free to comment on cultural impact or other interesting theories.
        <br/>
