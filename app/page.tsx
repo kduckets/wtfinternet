@@ -55,7 +55,7 @@ export default function Home() {
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
        The internet can be a powerful tool used for global communication and widely accessible, reliable information. 
-       It can also be a powerful tool used for greed, deceit, and widespread dangerous misinformation. It might be a good time to retrace our steps.</p>
+       It can also be a powerful tool used for greed, deceit, and widely accessible, dangerous misinformation. It might be a good time to retrace our steps.</p>
        <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base"> Each internet milestone on the timeline contains its profit model and technological impact. Please comment on cultural impact or other interesting theories.
         </p>
         <SearchBox onSearch={handleSearch} />
