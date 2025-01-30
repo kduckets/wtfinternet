@@ -69,7 +69,7 @@ export default function Home() {
        <br/>
        Kev
         </p>
-        <SearchBox onSearch={handleSearch} />
+        {/* <SearchBox onSearch={handleSearch} /> */}
         <FilterBar
           categoryGroups={categoryGroups}
           selectedCategories={selectedCategories}

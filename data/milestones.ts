@@ -607,6 +607,26 @@ export interface Milestone {
       impact: "Transforming numerous fields including healthcare, finance, and creative industries",
       categories: ["Technological", "Commercial", "Research", "Service Fees"],
     },
+    {
+        id: "deepseek",
+        year: 2023,
+        title: "DeepSeek AI",
+        description:
+          "DeepSeek, a Chinese AI company, releases a series of large language models, including DeepSeek-7B and DeepSeek-67B, demonstrating significant advancements in AI capabilities.",
+        profitModel: "AI research and development, potential commercial applications",
+        impact: "Advanced the field of large language models and contributed to the ongoing AI revolution",
+        categories: ["AI", "Research", "Commercial", "Technological", "Open Source"],
+      },
+      {
+        id: "mit-license",
+        year: 1988,
+        title: "MIT License",
+        description:
+          "The Massachusetts Institute of Technology releases the MIT License, a permissive free software license.",
+        profitModel: "Open-source software development and distribution",
+        impact: "Promoted open-source software development and collaboration in the tech industry",
+        categories: ["Open Source", "Legal", "Software"],
+      },
   ]
   
   export interface CategoryGroup {
