@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { motion, AnimatePresence } from "framer-motion"
 import { db } from "../../lib/firebase"
 import { collection, addDoc, query, where, orderBy, onSnapshot, limit } from "firebase/firestore"
@@ -84,18 +85,15 @@ export default function Comments({ milestoneId }: CommentsProps) {
           placeholder="Your name (optional)"
           className="w-full bg-gray-700 text-white border-gray-600 focus:border-blue-500"
         />
-        <div className="flex gap-2">
-          <Input
-            type="text"
-            value={newComment}
-            onChange={(e) => setNewComment(e.target.value)}
-            placeholder="Add a comment..."
-            className="flex-grow bg-gray-700 text-white border-gray-600 focus:border-blue-500"
-          />
-          <Button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-            Submit
-          </Button>
-        </div>
+        <Textarea
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          placeholder="Add a comment..."
+          className="w-full min-h-[100px] bg-gray-700 text-white border-gray-600 focus:border-blue-500 resize-y"
+        />
+        <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+          Submit
+        </Button>
       </form>
     </div>
   )
