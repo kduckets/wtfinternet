@@ -62,10 +62,12 @@ export default function Home() {
 
         </p>
        <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> 
-        Each internet milestone on the timeline below contains its profit model and technological impact. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc. There are no rules in the comments.
+        Each internet milestone on the timeline below contains its profit model and technological impact. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc. There are no rules in the comments, but imo you shouldn't be a dick.
        <br/>
        <br/>
-       -Kev
+       Love,
+       <br/>
+       Kev
         </p>
         <SearchBox onSearch={handleSearch} />
         <FilterBar
