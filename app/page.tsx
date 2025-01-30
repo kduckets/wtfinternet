@@ -58,7 +58,7 @@ export default function Home() {
        It can also be a powerful tool used for greed, deceit, and widely accessible (dangerous) misinformation. 
        
        <br/><br/>
-       It might be a good time to retrace our steps and explore how we got here. If we can better understand how the internet was built and how it evolved, maybe we can get better at detecting its deceptions and lies. Maybe we can build a better internet for our future.
+       It might be a good time to retrace our steps and explore how we got here. If we can better understand how the internet was built and how it evolved, maybe we can get better at detecting its deceptions and its lies. Maybe we can build a better internet for our future.
 
         </p>
        <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> 
