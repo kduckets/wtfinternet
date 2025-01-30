@@ -61,7 +61,8 @@ export default function Home() {
        It might be a good time to retrace our steps to explore how we got here. If we can better understand how the internet was built and how it evolved, perhaps we can get better at detecting its deceptions and its lies.
 
         </p>
-       <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> Each internet milestone on the timeline contains its profit model and technological impact. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc.
+       <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> 
+        Each internet milestone on the timeline below contains its profit model and technological impact. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc. There are no rules in the comments.
        <br/>
        <br/>
        -Kev
