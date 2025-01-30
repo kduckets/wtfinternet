@@ -589,6 +589,24 @@ export interface Milestone {
         impact: "Became essential for remote work and education, especially during the COVID-19 pandemic",
         categories: ["Communication", "Software", "Commercial"],
       },
+      {
+        id: "yahoo",
+        year: 1994,
+        title: "Yahoo!",
+        description: "Jerry Yang and David Filo create Yahoo! as a directory of websites.",
+        profitModel: "Initially advertising, later expanded to various internet services",
+        impact: "One of the first major web portals, helping users navigate the early web",
+        categories: ["Web", "Search", "Commercial"],
+      },
+      {
+        id: "mapquest",
+        year: 1996,
+        title: "MapQuest",
+        description: "MapQuest launches its online mapping service, providing directions and maps to internet users.",
+        profitModel: "Advertising and licensing of mapping data",
+        impact: "Pioneered online mapping and navigation services, changing how people plan travel",
+        categories: ["Web", "Commercial", "Navigation"],
+      },
   ]
   
   export interface CategoryGroup {
