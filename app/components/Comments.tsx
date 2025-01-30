@@ -28,7 +28,7 @@ export default function Comments({ milestoneId }: CommentsProps) {
     const q = query(
       collection(db, "comments"),
       where("milestoneId", "==", milestoneId),
-      orderBy("createdAt", "desc"),
+      orderBy("createdAt", "asc"),
       limit(50),
     )
 
