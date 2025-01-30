@@ -54,7 +54,7 @@ export default function Home() {
         What the fuck is the internet?
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
-       The internet can be a powerful tool for global communication and widely accessible, reliable information. 
+       The internet could be a powerful tool for global communication and widely accessible, reliable information. 
        It might be a good time to retrace our steps.</p>
        <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base"> Each internet milestone on the timeline contains its profit model and technological impact. Please comment on cultural impact or other interesting theories.
         </p>
