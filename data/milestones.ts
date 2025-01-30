@@ -638,6 +638,7 @@ export interface Milestone {
         "Licensing",
         "Donations",
         "Government Funded",
+        "Nonprofit",
         "Hardware Sales",
         "Service Fees",
         "Data Monetization",
