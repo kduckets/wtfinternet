@@ -5,7 +5,7 @@ import Timeline from "./components/Timeline"
 import FilterBar from "./components/FilterBar"
 import ScrollToTopButton from "./components/ScrollToTopButton"
 import { milestones, categoryGroups } from "../data/milestones"
-import SearchBox from "./components/SearchBox"
+// import SearchBox from "./components/SearchBox"
 
 export default function Home() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
