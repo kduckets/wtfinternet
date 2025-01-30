@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wtf is the internet?",
+  title: "wtf is the internet?",
   description: "Retrace our steps to learn how we got here",
 };
 
