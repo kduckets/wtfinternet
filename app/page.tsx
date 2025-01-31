@@ -62,7 +62,7 @@ export default function Home() {
 
         </p>
        <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> 
-        Each internet milestone on the timeline below contains its profit model and technological impact. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc. There are no rules in the comments, but imo you shouldn&apos;t be a dick.
+        Each internet milestone on the timeline below contains its profit model and technological impact. We need both facts and stories to truly understand something, but I think it's important to separate the two. Feel free to comment on cultural impact, personal stories, opinions, interesting theories, etc. There are no rules in the comments, but don&apos;t be a dick.
        <br/>
        <br/>
        Love,
