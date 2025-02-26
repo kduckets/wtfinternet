@@ -488,7 +488,7 @@ export interface Milestone {
       description:
         "Dom Hofmann, Rus Yusupov, and Colin Kroll create Vine, a short-form video hosting service where users can share six-second-long looping video clips.",
       profitModel: "Initially focused on user growth without a clear monetization strategy. Later acquired by Twitter, who had a difficult time profitizing and eventually killed it.",
-      impact: "Pioneered short-form video content and influenced the development of similar platforms, including TikTok (foundationally built with monetization in mind).",
+      impact: "Pioneered short-form video content and influenced the development of similar platforms, including TikTok.",
       categories: ["Social", "Video", "Mobile", "Startup"],
     },
     {
