@@ -275,6 +275,17 @@ export interface Milestone {
       categories: ["Nonprofit", "Legal", "Donations"],
     },
     {
+      id: "okcupid",
+      year: 2003,
+      title: "OkCupid",
+      description:
+        "Chris Coyne, Christian Rudder, Sam Yagan, and Max Krohn launch OkCupid, an online dating and friendship platform.",
+      profitModel: "Freemium model with paid features and advertising",
+      impact:
+        "Pioneered data-driven matchmaking and became one of the most popular dating sites, influencing online dating culture",
+      categories: ["Social", "Dating", "Commercial", "Freemium", "Data Analytics"],
+    },
+    {
       id: "skype",
       year: 2003,
       title: "Skype",
@@ -469,6 +480,16 @@ export interface Milestone {
       impact:
         "Democratized access to higher education and professional development, allowing millions to learn from top institutions regardless of location or background",
       categories: ["Education", "Digital", "Commercial", "Freemium"],
+    },
+    {
+      id: "vine",
+      year: 2012,
+      title: "Vine",
+      description:
+        "Dom Hofmann, Rus Yusupov, and Colin Kroll create Vine, a short-form video hosting service where users can share six-second-long looping video clips.",
+      profitModel: "Initially focused on user growth without a clear monetization strategy. Later acquired by Twitter, who had a difficult time profitizing and eventually killed it.",
+      impact: "Pioneered short-form video content and influenced the development of similar platforms, including TikTok (foundationally built with monetization in mind).",
+      categories: ["Social", "Video", "Mobile", "Startup"],
     },
     {
       id: "slack",
