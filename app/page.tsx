@@ -54,9 +54,8 @@ export default function Home() {
         What the fuck is the internet?
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">
-       The internet can be a powerful tool used for collaboration, communication, community, entertainment, and widely accessible (reliable) information. 
-       It can also be a powerful tool used for greed, deceit, isolation, and widely accessible (dangerous) misinformation. 
-       
+       The internet can be a powerful tool for collaboration, communication, community, entertainment, and widely accessible (reliable) information. 
+       It can also be a powerful tool for greed, deceit, isolation, addiction, and widely accessible (dangerous) misinformation.       
        <br/><br/>
        It might be a good time to retrace our steps and explore how we got here. If we can better understand how the internet was built and how it evolved, maybe we can get better at identifying both its benefits and its risks. Maybe we can help shape a better internet for our future.
 
