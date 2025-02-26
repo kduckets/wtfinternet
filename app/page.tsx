@@ -54,7 +54,7 @@ export default function Home() {
         What the fuck is the internet?
         </h1>
         <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">
-       The internet can be a powerful tool used for collaboration, communication, and widely accessible (reliable) information. 
+       The internet can be a powerful tool used for collaboration, communication, entertainment, and widely accessible (reliable) information. 
        It can also be a powerful tool used for greed, deceit, and widely accessible (dangerous) misinformation. 
        
        <br/><br/>
