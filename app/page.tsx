@@ -55,7 +55,7 @@ export default function Home() {
         </h1>
         
        <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-xs md:text-base"> 
-        Each internet milestone on the timeline below contains its profit model and technological impact. 
+        Each internet milestone contains its profit model and technological impact. 
         </p>
         {/* <SearchBox onSearch={handleSearch} /> */}
         <FilterBar
