@@ -54,12 +54,8 @@ export default function Home() {
         Wtf is the internet?
         </h1>
         
-       <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-sm md:text-base"> 
+       <p className="text-center text-gray-300 mb-8 md:mb-8 max-w-2xl mx-auto text-xs md:text-base"> 
         Each internet milestone on the timeline below contains its profit model and technological impact. 
-       <br/>
-       Love,
-       <br/>
-       Kev
         </p>
         {/* <SearchBox onSearch={handleSearch} /> */}
         <FilterBar
